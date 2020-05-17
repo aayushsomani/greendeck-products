@@ -1,0 +1,24 @@
+{
+  "name": "greendeck-filteration",
+  "version": "1.0.0",
+  "description": "product filterations ui/ux",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "cd client && npm install && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14",
+    "ndjson": "^1.5.0",
+    "path": "^0.12.7"
+  }
+}
